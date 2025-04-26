@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.painter.Painter
 import io.github.octestx.basic.multiplatform.common.utils.OS
 import io.github.octestx.krecall.plugins.basic.AbsCaptureScreenPlugin
+import io.github.octestx.krecall.plugins.basic.PluginContext
 import io.github.octestx.krecall.plugins.basic.PluginMetadata
 import io.github.octestx.krecall.plugins.basic.WindowInfo
 import io.klogging.noCoLogger
@@ -99,7 +100,7 @@ class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScr
     }
 
 
-    override suspend fun tryInitInner(): InitResult {
+    override suspend fun tryInitInner(context: PluginContext): InitResult {
         ologger.info { "TryInit" }
         val e = runBlocking {
             try {
