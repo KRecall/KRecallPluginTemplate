@@ -1,5 +1,21 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
+val plugins = listOf(
+    PluginMetadata(
+        pluginId = "CaptureScreenByKDESpectaclePlugin",
+        supportPlatform = setOf(OS.LINUX),
+        supportUI = true,
+        pluginClass = "io.github.octestx.krecall.plugins.captureScreen.kdespectacle.CaptureScreenByKDESpectaclePlugin"
+    ),
+)
+val groupName = "io.github.octestx.krecall.plugins.ext.getscreen"
+val versionName = "1.0-SNAPSHOT"
+val pluginPackName = "CaptureScreenByKDESpectaclePlugin"
+
+
+
+
+
 plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
@@ -8,8 +24,8 @@ plugins {
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
-group = "io.github.octestx.krecall.plugins.ext.getscreen"
-version = "1.0-SNAPSHOT"
+group = groupName
+version = versionName
 
 repositories {
     mavenCentral()
@@ -31,32 +47,23 @@ dependencies {
     implementation("io.github.octestx:basic-multiplatform-ui-lib:0.0.6R1F1")
 }
 
-val plugins = listOf(
-    PluginMetadata(
-        pluginId = "CaptureScreenByKDESpectaclePlugin",
-        supportPlatform = setOf(OS.LINUX),
-        supportUI = true,
-        pluginClass = "CaptureScreenByKDESpectaclePlugin"
-    ),
-)
-
-compose.desktop {
-    application {
-        mainClass = "MainKt"
-
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "SpectacleGetScreenKRecallPlugin"
-            packageVersion = "1.0.0"
-        }
-    }
-}
+//compose.desktop {
+//    application {
+//        mainClass = "MainKt"
+//
+//        nativeDistributions {
+//            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+//            packageName = "SpectacleGetScreenKRecallPlugin"
+//            packageVersion = "1.0.0"
+//        }
+//    }
+//}
 
 tasks {
     shadowJar {
-        archiveBaseName.set("multi-plugin-bundle")
+        archiveBaseName.set(pluginPackName)
         mergeServiceFiles()
-        archiveVersion.set("1.0.0")
+        archiveVersion.set(versionName)
         archiveClassifier.set("")
 
         // 包含所有插件元数据

@@ -1,5 +1,26 @@
 # Plugin Development Guide
 
+## Change your project info
+In the setting.gradle.kts file
+```kotlin
+rootProject.name = "SpectacleGetScreenKRecallPlugin"
+```
+
+In the build.gradle.kts file
+```kotlin
+val plugins = listOf(
+    PluginMetadata(
+        pluginId = "CaptureScreenByKDESpectaclePlugin",
+        supportPlatform = setOf(OS.LINUX),
+        supportUI = true,
+        pluginClass = "io.github.octestx.krecall.plugins.captureScreen.kdespectacle.CaptureScreenByKDESpectaclePlugin"
+    ),
+)
+val groupName = "io.github.octestx.krecall.plugins.ext.getscreen"
+val versionName = "1.0-SNAPSHOT"
+val pluginPackName = "CaptureScreenByKDESpectaclePlugin"
+```
+
 ## Create Plugin Class
 as CaptureScreenByKDESpectaclePlugin class
 
