@@ -4,8 +4,15 @@
 as CaptureScreenByKDESpectaclePlugin class
 
 must extend AbsCaptureScreenPlugin, other AbsPlugin or PluginBasic
+
 must has a constructor with need metadata parameter
+
+remember to add pluginClass to the pluginMetadata
+
+remember changed your package name
 ```kotlin
+package io.github.octestx.krecall.plugins.captureScreen.kdespectacle
+
 class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScreenPlugin(metadata)
 ```
 

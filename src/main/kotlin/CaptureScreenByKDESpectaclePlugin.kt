@@ -1,3 +1,5 @@
+package io.github.octestx.krecall.plugins.captureScreen.kdespectacle
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
