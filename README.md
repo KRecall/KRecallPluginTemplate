@@ -36,3 +36,6 @@ package io.github.octestx.krecall.plugins.captureScreen.kdespectacle
 
 class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScreenPlugin(metadata)
 ```
+
+# Build the plugin package
+Gradle tasks -> Tasks -> shadow -> shadowJar
