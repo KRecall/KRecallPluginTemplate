@@ -36,17 +36,3 @@ package io.github.octestx.krecall.plugins.captureScreen.kdespectacle
 
 class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScreenPlugin(metadata)
 ```
-
-## Register Plugin
-in the build.gradle file
-add pluginMetadata to the plugin list
-```kotlin
-val plugins = listOf(
-    PluginMetadata(
-        pluginId = "CaptureScreenByKDESpectaclePlugin",
-        supportPlatform = setOf(OS.LINUX),
-        supportUI = true,
-        pluginClass = "CaptureScreenByKDESpectaclePlugin"
-    ),
-)
-```

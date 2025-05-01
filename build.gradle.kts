@@ -1,16 +1,17 @@
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
+val groupName = "io.github.octestx.krecall.plugins.captureScreen.kdespectacle"
+val versionName = "1.0-SNAPSHOT"
+val pluginPackName = "CaptureScreenByKDESpectaclePlugin"
 val plugins = listOf(
     PluginMetadata(
         pluginId = "CaptureScreenByKDESpectaclePlugin",
         supportPlatform = setOf(OS.LINUX),
         supportUI = true,
-        pluginClass = "io.github.octestx.krecall.plugins.captureScreen.kdespectacle.CaptureScreenByKDESpectaclePlugin"
+        // 插件类的全限定名
+        pluginClass = "$groupName.CaptureScreenByKDESpectaclePlugin"
     ),
 )
-val groupName = "io.github.octestx.krecall.plugins.ext.getscreen"
-val versionName = "1.0-SNAPSHOT"
-val pluginPackName = "CaptureScreenByKDESpectaclePlugin"
 
 
 
@@ -42,7 +43,7 @@ dependencies {
     implementation(compose.material3)
     implementation(compose.components.resources)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-    implementation("io.github.octestx.krecall.plugins.basiclib:library:1.4.3")
+    implementation("io.github.octestx.krecall.plugins.basiclib:library:1.4.6")
     implementation("io.github.octestx:basic-multiplatform-lib:0.1.0")
     implementation("io.github.octestx:basic-multiplatform-ui-lib:0.1.3")
 }

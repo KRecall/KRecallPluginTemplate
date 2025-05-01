@@ -25,6 +25,16 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.OutputStream
 
+/**
+ * 记得把包名改成你的
+ * 这是插件类，每个插件包包括多个这样的插件类
+ * 插件类必须继承PluginBasicExt
+ * 不过根据依赖关系，可以根据需要选择继承PluginBasic或者其他子类
+ * 插件的其他能力例如注册Nav导航，SettingPage中的页面，侧滑栏的标签页等待是通过实现PluginAbilityInterfaces中各种各样的接口
+ * @see io.github.octestx.krecall.plugins.basic.PluginBasicExt
+ * @see io.github.octestx.krecall.plugins.basic.PluginBasic
+ * @see io.github.octestx.krecall.plugins.basic.PluginAbilityInterfaces
+ */
 class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScreenPlugin(metadata) {
     companion object {
         val metadata = PluginMetadata(

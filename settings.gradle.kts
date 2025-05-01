@@ -13,4 +13,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "SpectacleGetScreenKRecallPlugin"
+rootProject.name = "KRecallPluginTemplate"
