@@ -2,7 +2,7 @@ name: Release Build
 
 on:
   release:
-    types: [releaseShadowJar]
+    types: [published]
 
 jobs:
   build-and-attach:
