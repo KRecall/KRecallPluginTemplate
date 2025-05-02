@@ -43,7 +43,7 @@ dependencies {
     implementation(compose.material3)
     implementation(compose.components.resources)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
-    implementation("io.github.octestx.krecall.plugins.basiclib:library:1.4.8")
+    implementation("io.github.octestx.krecall.plugins.basiclib:library:1.4.9")
     implementation("io.github.octestx:basic-multiplatform-lib:0.1.1")
     implementation("io.github.octestx:basic-multiplatform-ui-lib:0.1.3")
 }
