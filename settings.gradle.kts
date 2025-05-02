@@ -13,4 +13,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "CaptureScreenByKDESpectaclePlugin"
+rootProject.name = "KRecallPluginTemplate"
