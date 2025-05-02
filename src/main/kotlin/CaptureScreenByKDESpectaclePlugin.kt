@@ -72,7 +72,7 @@ class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScr
         )
     }
 
-    override fun load() {
+    override fun loadInner(context: PluginContext) {
         ologger.info { "Loaded" }
     }
 
@@ -110,7 +110,7 @@ class CaptureScreenByKDESpectaclePlugin(metadata: PluginMetadata): AbsCaptureScr
     }
 
 
-    override suspend fun tryInitInner(context: PluginContext): InitResult {
+    override suspend fun tryInitInner(): InitResult {
         ologger.info { "TryInit" }
         val e = runBlocking {
             try {
